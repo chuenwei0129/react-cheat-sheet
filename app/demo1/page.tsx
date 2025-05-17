@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, startTransition } from 'react'
-import { match } from 'ts-pattern'
 import { Button } from '@/components/ui/button'
+import { startTransition, useState } from 'react'
+import { match } from 'ts-pattern'
 
 export default function Page() {
   const [tab, setTab] = useState('Tab 1')

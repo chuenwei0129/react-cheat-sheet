@@ -19,12 +19,12 @@ export default function TodoItem({ todo }: { todo: Todo }) {
       />
       <label
         htmlFor={String(todo.id)}
-        className={completed ? 'line-through text-black/40' : 'text-black'}
+        className={completed ? 'text-black/40 line-through' : 'text-black'}
       >
         {todo.title}
         <button
           type="button"
-          className="bg-red-500 text-white rounded px-2 py-1 ml-2"
+          className="ml-2 rounded bg-red-500 px-2 py-1 text-white"
           onClick={async () => {
             await deleteTodo(todo.id)
           }}
@@ -33,7 +33,7 @@ export default function TodoItem({ todo }: { todo: Todo }) {
         </button>
         <button
           type="button"
-          className="bg-blue-500 text-white rounded px-2 py-1 ml-2"
+          className="ml-2 rounded bg-blue-500 px-2 py-1 text-white"
           onClick={async () => {
             const newTitle = prompt('Edit todo title', todo.title)
             if (newTitle) {

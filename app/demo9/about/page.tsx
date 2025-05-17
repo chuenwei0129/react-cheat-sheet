@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="h-60 mt-5 flex-1 rounded-xl bg-indigo-500 text-white flex items-center justify-center">
+    <div className="mt-5 flex h-60 flex-1 items-center justify-center rounded-xl bg-indigo-500 text-white">
       Hello, About!
     </div>
   )

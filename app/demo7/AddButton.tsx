@@ -24,7 +24,7 @@ export default function AddButton({ todos }: { todos: Todo[] }) {
           sending: true,
         },
       ]
-    }
+    },
   )
 
   useEffect(() => {

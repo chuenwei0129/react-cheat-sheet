@@ -1,13 +1,13 @@
 import { use } from 'react'
 import { findTodos } from './actions'
-import TodoItem from './TodoItem'
 import TodoForm from './TodoForm'
+import TodoItem from './TodoItem'
 
 export default function Page() {
   const todos = use(findTodos())
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Todo List</h1>
+      <h1 className="mb-4 text-2xl font-bold">Todo List</h1>
 
       <TodoForm />
 

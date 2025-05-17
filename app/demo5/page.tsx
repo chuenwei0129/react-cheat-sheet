@@ -38,13 +38,13 @@ export default function Page() {
         return { status: 'error', error: (error as Error).message }
       }
     },
-    { status: 'idle' }
+    { status: 'idle' },
   )
 
   return (
     <form
       action={formAction}
-      className="flex flex-col space-y-4 max-w-sm"
+      className="flex max-w-sm flex-col space-y-4"
       noValidate
     >
       <div className="flex space-x-2">
@@ -57,7 +57,7 @@ export default function Page() {
       <div className="min-h-[40px]">
         {match(state)
           .with({ status: 'error' }, ({ error }) => (
-            <p className="text-red-500 text-sm animate-fade-in">❌ {error}</p>
+            <p className="animate-fade-in text-sm text-red-500">❌ {error}</p>
           ))
           .with({ status: 'success' }, ({ data }) => (
             <div className="text-green-500">

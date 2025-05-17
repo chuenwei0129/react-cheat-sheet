@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useDeferredValue } from 'react' // 1. 替换 startTransition 为 useDeferredValue
-import { match } from 'ts-pattern'
 import { Button } from '@/components/ui/button'
+import { useDeferredValue, useState } from 'react' // 1. 替换 startTransition 为 useDeferredValue
+import { match } from 'ts-pattern'
 
 export default function Page() {
   const [tab, setTab] = useState('Tab 1')

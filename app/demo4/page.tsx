@@ -2,8 +2,8 @@
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { useReducer } from 'react'
 import { Loader2 } from 'lucide-react'
+import { useReducer } from 'react'
 import { match, P } from 'ts-pattern'
 
 type State =
@@ -93,7 +93,7 @@ export default function Page() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-4 max-w-sm"
+      className="flex max-w-sm flex-col space-y-4"
       noValidate // 禁用浏览器默认验证
     >
       <div className="flex space-x-2">
@@ -110,7 +110,7 @@ export default function Page() {
         >
           {match(state)
             .with({ status: 'loading' }, () => (
-              <Loader2 className="animate-spin h-5 w-5" />
+              <Loader2 className="h-5 w-5 animate-spin" />
             ))
             .otherwise(() => 'Subscribe')}
         </Button>
@@ -119,10 +119,10 @@ export default function Page() {
       <div className="min-h-[40px]">
         {match(state)
           .with({ status: 'error' }, ({ message }) => (
-            <p className="text-red-500 text-sm animate-fade-in">❌ {message}</p>
+            <p className="animate-fade-in text-sm text-red-500">❌ {message}</p>
           ))
           .with({ status: 'success' }, ({ data }) => (
-            <div className="text-green-600 text-sm animate-fade-in">
+            <div className="animate-fade-in text-sm text-green-600">
               ✅ Subscribed successfully!
               <div className="mt-1 text-xs text-gray-500">
                 Subscription ID: {Math.floor(data.id)}

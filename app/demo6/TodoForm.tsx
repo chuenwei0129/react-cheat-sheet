@@ -1,8 +1,8 @@
 'use client'
 
 import { useActionState } from 'react'
-import { addTodo } from './actions'
 import { match } from 'ts-pattern'
+import { addTodo } from './actions'
 
 export type State =
   | { status: 'idle' }
@@ -14,7 +14,7 @@ export default function TodoForm() {
     addTodo,
     {
       status: 'idle',
-    }
+    },
   )
 
   return (
@@ -24,11 +24,11 @@ export default function TodoForm() {
           type="text"
           name="title"
           placeholder="Add a new todo"
-          className="border border-gray-300 rounded px-2 py-1"
+          className="rounded border border-gray-300 px-2 py-1"
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white rounded px-4 py-1 ml-2"
+          className="ml-2 rounded bg-blue-500 px-4 py-1 text-white"
         >
           {isPending ? 'Adding...' : 'Add Todo'}
         </button>
@@ -36,7 +36,7 @@ export default function TodoForm() {
       <div>
         {match(state)
           .with({ status: 'error' }, ({ error }) => (
-            <p className="text-red-500 text-sm animate-fade-in">❌ {error}</p>
+            <p className="animate-fade-in text-sm text-red-500">❌ {error}</p>
           ))
           .otherwise(() => null)}
       </div>

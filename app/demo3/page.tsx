@@ -2,8 +2,8 @@
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { useState } from 'react'
 import { Loader2 } from 'lucide-react'
+import { useState } from 'react'
 
 // 模拟随机成功/失败的请求
 const mockApiRequest = (email: string) => {
@@ -55,7 +55,7 @@ export default function Page() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 max-w-sm ">
+    <form onSubmit={handleSubmit} className="flex max-w-sm flex-col space-y-4">
       <div className="flex space-x-2">
         <Input
           type="email"
@@ -65,18 +65,18 @@ export default function Page() {
           disabled={loading}
         />
         <Button type="submit" disabled={loading} className="min-w-[120px]">
-          {loading ? <Loader2 className="animate-spin h-5 w-5" /> : 'Subscribe'}
+          {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : 'Subscribe'}
         </Button>
       </div>
 
       {/* 状态反馈区域 */}
       <div className="min-h-[40px]">
         {error && (
-          <p className="text-red-500 text-sm animate-fade-in">❌ {error}</p>
+          <p className="animate-fade-in text-sm text-red-500">❌ {error}</p>
         )}
 
         {data && (
-          <div className="text-green-600 text-sm animate-fade-in">
+          <div className="animate-fade-in text-sm text-green-600">
             ✅ Subscribed successfully!
             <div className="mt-1 text-xs text-gray-500">
               Subscription ID: {data.id}
