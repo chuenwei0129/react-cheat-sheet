@@ -20,9 +20,6 @@ importers:
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
-      immer:
-        specifier: ^10.1.1
-        version: 10.1.1
       lucide-react:
         specifier: ^0.509.0
         version: 0.509.0(react@19.1.0)

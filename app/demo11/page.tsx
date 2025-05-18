@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 
 // 自定义 Hook 实现类似指令功能
 function useResizeDirective(callback: (entry: ResizeObserverEntry) => void) {
@@ -38,8 +38,6 @@ export default function Page() {
 
   // 使用自定义 Hook 获取 ref
   const resizeRef = useResizeDirective(handleResize)
-
-  const [count, setCount] = useState(0)
 
   return (
     <div>

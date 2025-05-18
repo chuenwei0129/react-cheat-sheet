@@ -14,7 +14,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "immer": "^10.1.1",
     "lucide-react": "^0.509.0",
     "next": "15.3.2",
     "openai": "^4.98.0",
