@@ -1,4 +1,11 @@
 {
-  "cSpell.words": ["commitlint", "nextui", "npmjs", "vercel", "Vite"],
+  "cSpell.words": [
+    "commitlint",
+    "nextui",
+    "npmjs",
+    "vercel",
+    "vidstack",
+    "Vite"
+  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

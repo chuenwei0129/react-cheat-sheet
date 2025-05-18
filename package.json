@@ -13,13 +13,16 @@
     "@radix-ui/react-slot": "^1.2.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "immer": "^10.1.1",
     "lucide-react": "^0.509.0",
     "next": "15.3.2",
     "openai": "^4.98.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.2.0",
-    "ts-pattern": "^5.7.0"
+    "ts-pattern": "^5.7.0",
+    "use-immer": "^0.11.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
