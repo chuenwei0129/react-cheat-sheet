@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
       {
         hostname: 'picsum.photos',
       },
+      {
+        hostname: 'loremflickr.com',
+      },
+      {
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 }
